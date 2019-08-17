@@ -11,17 +11,13 @@ import javax.ws.rs.core.Response;
 @Path("/hello")
 @Produces(MediaType.TEXT_PLAIN)
 public class PortfolioResource {
-   /* @GET
+
+    @GET
     @Path("/{param}")
     public Response printMessage(@PathParam("param") String msg) {
         String result = "Hello " + msg + "!";
         return Response.status(200).entity(result).build();
-    }*/
-
-    @GET
-    public Response printMessage() {
-        String result = "Salut !";
-        return Response.status(200).entity(result).build();
     }
+
 }
 

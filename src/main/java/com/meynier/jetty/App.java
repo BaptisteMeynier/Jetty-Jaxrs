@@ -13,8 +13,7 @@ public class App {
 
     public static void main(String[] args) throws Exception {
 
-        final int port = 8080;
-        final Server server = new Server(port);
+        final Server server = new Server(8080);
 
         // Setup the basic Application "context" at "/".
         // This is also known as the handler tree (in Jetty speak).
@@ -29,6 +28,7 @@ public class App {
         // Setup the DefaultServlet at "/".
         final ServletHolder defaultServlet = new ServletHolder(new DefaultServlet());
         context.addServlet(defaultServlet, CONTEXT_ROOT);
+        server.setHandler(context);
         server.start();
         server.join();
     }

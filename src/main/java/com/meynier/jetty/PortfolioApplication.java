@@ -4,10 +4,9 @@ import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 import java.util.Set;
 
-@ApplicationPath("")
 public class PortfolioApplication extends Application {
     @Override
-    public Set<Object> getSingletons() {
+    public Set<Class<?>> getClasses() {
         return Set.of(PortfolioResource.class);
     }
 }
